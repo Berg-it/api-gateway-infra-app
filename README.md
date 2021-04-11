@@ -1,7 +1,11 @@
 # Welcome to your CDK Java project!
 
-You should explore the contents of this project. It demonstrates a CDK app with an instance of a stack (`ApiGatewayInfraAppStack`)
-which contains an Amazon SQS queue that is subscribed to an Amazon SNS topic.
+this project aims to create __AWS GATEWAY API__ using CDK. By default I added only one Endpoint where `Integration type` is equal to `Mock` in order to test that your resource work correctly.
+
+under the class __ApiGatewayInfraAppStack__, I import the ARN of my current user pool using the code as bellow
+  `Fn.importValue("userPoolArn");` 
+So if you need to configure `CfnAuthorizer`, you must change the passed value by your exported arn value of user pool.
+
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
@@ -17,3 +21,7 @@ It is a [Maven](https://maven.apache.org/) based project, so you can open this p
  * `cdk docs`        open CDK documentation
 
 Enjoy!
+
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
